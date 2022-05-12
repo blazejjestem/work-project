@@ -14,22 +14,35 @@
   </head>
   <body>
     <header>
-      <nav>
-        <a href="#"><img src="./img/cupra-logo.png" alt="Cupra logo" /></a>
-        <div class="nav-menu">
-          <ul class="nav-links">
-            <li><a href="#">Samochody</a></li>
-            <li><a href="#">Jazda próbna</a></li>
-            <li><a href="#">Oferta</a></li>
-            <li><a href="#">Salony Cupra</a></li>
-          </ul>
-          <ul class="nav-actions">
-            <li><a href="#">+48 58 506 65 65</a></li>
-            <li><a href="#">Zapytaj o ofertę</a></li>
-            <li><a href="#">Umów jazdę próbną</a></li>
-          </ul>
-        </div>
-      </nav>
+      <div class="container">
+        <nav class="nav">
+          <a href="#"
+            ><img src="./img/cupra-logo.png" alt="Cupra logo" class="nav__logo"
+          /></a>
+          <div class="nav__menu">
+            <ul class="nav__links">
+              <li><a href="#">Samochody</a></li>
+              <li><a href="#">Jazda próbna</a></li>
+              <li><a href="#">Oferta</a></li>
+              <li><a href="#">Salony Cupra</a></li>
+            </ul>
+            <ul class="nav__actions">
+              <li>
+                <a href="#"><strong>+48 58 506 65 65</strong></a>
+              </li>
+              <li><a href="#" class="btn">Zapytaj o ofertę</a></li>
+              <li><a href="#" class="btn btn--dark">Umów jazdę próbną</a></li>
+            </ul>
+          </div>
+          <div class="nav__toggle-button">
+            <span class="nav__line nav__line--one"></span>
+            <span class="nav__line nav__line--two"></span>
+            <span class="nav__line nav__line--three"></span>
+            <span class="nav__line nav__line--four"></span>
+          </div>
+        </nav>
+      </div>
     </header>
+    <script src="./js/index.js"></script>
   </body>
 </html>
