@@ -1,15 +1,15 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-// CSS Reset
-html,
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
 body,
-div,
-span,
-applet,
-object,
-iframe,
 h1,
 h2,
 h3,
@@ -17,119 +17,32 @@ h4,
 h5,
 h6,
 p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
 ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
+ul {
   margin: 0;
   padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
 }
-/* HTML5 display-role reset for older browsers */
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
-  display: block;
+
+h1,
+h2,
+h3 {
+  font-weight: 300;
 }
-body {
-  line-height: 1;
-}
+
 ol,
 ul {
   list-style: none;
 }
-blockquote,
-q {
-  quotes: none;
+
+img {
+  max-width: 100%;
+  height: auto;
 }
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-  content: "";
-  content: none;
-}
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
+
 a {
   color: inherit;
 }
+
 // End of Reset
 
 // Fonts
@@ -163,21 +76,32 @@ $color-white: #fff;
 $color-black: #000;
 
 body {
-  font-family: "Cupra";
+  font-family: "Cupra", sans-serif;
   font-size: 16px;
-  // height: 10000px;
 }
 
+// Utility classes
 .btn {
-  border: 1px solid black !important;
+  border: 1px solid black;
   white-space: nowrap;
+  text-decoration: none;
   max-width: 250px;
-  padding: 1em !important;
+  padding: 0.8em 1em !important;
   font-weight: 400 !important;
 
   &--dark {
     color: white;
     background-color: $color-dark-gray;
+  }
+
+  &--transparent {
+    background-color: transparent;
+  }
+
+  &--sand {
+    background-color: $color-sand;
+    color: $color-black;
+    border: none;
   }
 }
 .container {
@@ -185,21 +109,52 @@ body {
   margin: 0 auto;
   padding: 0 1em;
 }
+
+.position-relative {
+  position: relative;
+}
+
+.opacity-50 {
+  opacity: 0.5;
+}
+
+.fw-300 {
+  font-weight: 300;
+}
+.fw-400 {
+  font-weight: 400;
+}
+.fw-500 {
+  font-weight: 500;
+}
+.fs-xl {
+  font-size: 32px;
+}
+.fs-l {
+  font-size: 32px;
+}
+.fs-m {
+  font-size: 20px;
+}
+.fs-s {
+  font-size: 16px;
+}
+
 // Nav
 
 header {
   background-color: $color-light-gray;
-  padding: 2em 0;
+  padding: 1.8449em 0;
   position: fixed;
   top: 0;
   width: 100%;
+  z-index: 21;
 }
 .nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
   white-space: nowrap;
-
   ul {
     width: 100%;
     li {
@@ -229,22 +184,19 @@ header {
     flex-direction: column;
     gap: 1em;
     position: absolute;
-    top: 87px;
+    padding-bottom: 1em;
+    top: 73px;
     left: 0;
-    height: calc(100vh - 87px);
+    height: calc(100vh - 75px);
     width: 100vw;
     background-color: $color-light-gray;
   }
   &__links {
     display: flex;
     flex-direction: column;
-    // align-items: center;
     gap: 1em;
     font-size: 1.25em;
     li {
-      a {
-        padding: 1em 0;
-      }
       border-bottom: 1px solid rgba(#000, 0.2);
     }
   }
@@ -254,7 +206,6 @@ header {
     flex-direction: column;
     align-items: center;
     gap: 1em;
-    // gap: 2.5em;
   }
 
   &__toggle-button {
@@ -302,7 +253,35 @@ header {
     }
   }
 }
+.hero {
+  video {
+    object-fit: cover;
+    object-position: center;
+    height: 100vh;
+    width: 100%;
+  }
 
+  &__text {
+    color: $color-white;
+    position: absolute;
+    bottom: 80px;
+    h1 {
+      font-size: 26px;
+
+      margin: 10px 0 50px 0;
+    }
+  }
+}
+@media screen and (min-width: 750px) {
+  .hero {
+    &__text {
+      left: 80px;
+      h1 {
+        font-size: 32px;
+      }
+    }
+  }
+}
 @media screen and (min-width: 1250px) {
   header {
     padding: 1em 0;
@@ -311,11 +290,6 @@ header {
     ul {
       padding: 0;
       width: auto;
-      li {
-        a {
-          // padding: 1em 0;
-        }
-      }
     }
     &__menu {
       width: 100%;
@@ -327,6 +301,7 @@ header {
 
     &__links {
       flex-direction: row;
+      font-size: 1rem;
       li {
         border: none;
       }
@@ -341,9 +316,34 @@ header {
 }
 
 @media screen and (min-width: 1350px) {
+  .fs-xl {
+    font-size: 60px;
+  }
+  .fs-l {
+    font-size: 40px;
+  }
+  .fs-m {
+    font-size: 36px;
+  }
+  .fs-s {
+    font-size: 20px;
+  }
   .nav {
     &__menu {
       padding: 0 4em;
+    }
+  }
+  .hero {
+    video {
+      height: 100vh;
+    }
+    &__text {
+      left: 80px;
+      bottom: 100px;
+      h1 {
+        line-height: 64px;
+        font-size: 60px;
+      }
     }
   }
 }
