@@ -1,2 +1,5 @@
 fonts
 .DS_Store
+node_modules
+holder.css
+hoder.html
