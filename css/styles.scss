@@ -118,26 +118,63 @@ body {
   opacity: 0.5;
 }
 
-.fw-300 {
-  font-weight: 300;
+.padding {
+  &-10 {
+    padding: 10px 0;
+  }
 }
-.fw-400 {
-  font-weight: 400;
+
+.flex {
+  display: flex;
+  flex-direction: column;
+  &-50 {
+    width: 49%;
+  }
+  &-row {
+    flex-direction: row;
+  }
+  &-column {
+    flex-direction: column;
+  }
 }
-.fw-500 {
-  font-weight: 500;
+// Font weight
+.fw {
+  &-300 {
+    font-weight: 300;
+  }
+  &-400 {
+    font-weight: 400;
+  }
+  &-500 {
+    font-weight: 500;
+  }
 }
-.fs-xl {
-  font-size: 32px;
+// Font size
+.fs {
+  &-xl {
+    font-size: 32px;
+  }
+  &-l {
+    font-size: 32px;
+  }
+  &-m {
+    font-size: 20px;
+  }
+  &-s {
+    font-size: 16px;
+  }
 }
-.fs-l {
-  font-size: 32px;
-}
-.fs-m {
-  font-size: 20px;
-}
-.fs-s {
-  font-size: 16px;
+
+.title {
+  &-l {
+    // padding: 20px 0;
+  }
+  &-m {
+    padding: 15px 0;
+  }
+  &-s {
+    // padding: 10px 0;
+  }
 }
 
 // Nav
@@ -149,6 +186,7 @@ header {
   top: 0;
   width: 100%;
   z-index: 21;
+  box-shadow: 0 0 10px 5px black;
 }
 .nav {
   display: flex;
@@ -253,7 +291,11 @@ header {
     }
   }
 }
+
+// Hero section
+
 .hero {
+  height: 100vh;
   video {
     object-fit: cover;
     object-position: center;
@@ -266,18 +308,83 @@ header {
     position: absolute;
     bottom: 80px;
     h1 {
-      font-size: 26px;
-
+      font-size: 32px;
       margin: 10px 0 50px 0;
     }
   }
 }
+
+// Try-out section
+
+.try-out {
+  color: white;
+  padding: 80px 0;
+  background-color: $color-dark-gray;
+
+  &__text-content {
+    max-width: 500px;
+  }
+  &__cta {
+    margin-bottom: 40px;
+    p:last-of-type {
+      margin-bottom: 40px;
+    }
+  }
+  .col {
+    img {
+      width: 100%;
+    }
+  }
+}
+
+// Media queries
 @media screen and (min-width: 750px) {
+  // Font size
+  .fs {
+    &-xl {
+      font-size: 48px;
+    }
+    &-l {
+      font-size: 40px;
+    }
+    &-m {
+      font-size: 36px;
+    }
+    &-s {
+      font-size: 20px;
+    }
+  }
+
   .hero {
     &__text {
       left: 80px;
       h1 {
-        font-size: 32px;
+        font-size: 48px;
+      }
+    }
+  }
+  .try-out {
+    &__cta {
+      margin-top: 100px;
+      p:last-of-type {
+        margin-bottom: 50px;
+      }
+    }
+    .flex {
+      flex-direction: row;
+      gap: 2em;
+    }
+    img {
+      padding: 20px 0 0 0;
+    }
+    .col {
+      flex-shrink: 1;
+      &:first-of-type {
+        width: 60%;
+      }
+      &:last-of-type {
+        margin-top: 300px;
+        width: 40%;
       }
     }
   }
@@ -316,17 +423,20 @@ header {
 }
 
 @media screen and (min-width: 1350px) {
-  .fs-xl {
-    font-size: 60px;
-  }
-  .fs-l {
-    font-size: 40px;
-  }
-  .fs-m {
-    font-size: 36px;
-  }
-  .fs-s {
-    font-size: 20px;
+  // Font size
+  .fs {
+    &-xl {
+      font-size: 60px;
+    }
+    &-l {
+      font-size: 40px;
+    }
+    &-m {
+      font-size: 36px;
+    }
+    &-s {
+      font-size: 20px;
+    }
   }
   .nav {
     &__menu {
@@ -334,9 +444,6 @@ header {
     }
   }
   .hero {
-    video {
-      height: 100vh;
-    }
     &__text {
       left: 80px;
       bottom: 100px;
