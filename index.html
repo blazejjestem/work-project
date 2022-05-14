@@ -9,7 +9,10 @@
       name="description"
       content="Dbałość o szczegóły, ekspresyjny design i niezwykłe osiągi. CUPRA to marka oferująca samochody z pazurem i sportowym charakterem. Sprawdź naszą ofertę!"
     />
-
+    <link
+      rel="stylesheet"
+      href="./node_modules/@splidejs/splide/dist/css/splide.min.css"
+    />
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
@@ -21,7 +24,7 @@
           /></a>
           <div class="nav__menu">
             <ul class="nav__links">
-              <li><a href="#">Samochody</a></li>
+              <li><a href="#models-carousel">Samochody</a></li>
               <li><a href="#">Jazda próbna</a></li>
               <li><a href="#">Oferta</a></li>
               <li><a href="#">Salony Cupra</a></li>
@@ -91,13 +94,15 @@
                 detale.
               </p>
               <div class="try-out__cta">
-                <p class="title-m fs-l fw-300">TYLKO DLA ODWAŻNYCH</p>
-                <p class="fs-s opacity-50">
-                  Model CUPRA, który idealnie wpisuje się w DNA marki. Unikalny
-                  SUV coupé, wyjątkowy, odważny i innowacyjny – zapewni Ci to,
-                  co najlepsze w marce CUPRA.
-                </p>
-                <a href="#" class="btn btn--sand"> Umów jazdę próbną </a>
+                <div class="try-out__text-content">
+                  <p class="try-out__title fs-l fw-300">TYLKO DLA ODWAŻNYCH</p>
+                  <p class="fs-s opacity-50">
+                    Model CUPRA, który idealnie wpisuje się w DNA marki.
+                    Unikalny SUV coupé, wyjątkowy, odważny i innowacyjny –
+                    zapewni Ci to, co najlepsze w marce CUPRA.
+                  </p>
+                  <a href="#" class="btn btn--sand"> Umów jazdę próbną </a>
+                </div>
               </div>
             </div>
             <div class="col">
@@ -116,7 +121,179 @@
           </div>
         </div>
       </section>
+      <section
+        class="splide models-carousel"
+        id="models-carousel"
+        aria-label="Cupra models carousel"
+      >
+        <div class="splide__track">
+          <div class="splide__list">
+            <div class="splide__slide">
+              <h2 class="models-carousel__title fs-l fw-400">
+                CUPRA Formentor
+              </h2>
+              <img
+                src="./img/models-carousel/cupra-formentor.png"
+                alt="A very descriptive description of an img."
+                class="models-carousel__img"
+              />
+              <div class="models-carousel__text-content">
+                <p class="models-carousel__model-stats">
+                  Maksymalna prędkość: 204 KM/H Moc silnika: 150 KM
+                </p>
+                <div class="models-carousel__row">
+                  <p>
+                    Dostępny w leasingu z <br />
+                    0% opłaty własnej
+                  </p>
+                  <p>Rata netto/mies. od* <br /><strong>1439 zł</strong></p>
+                  <p>Cena brutto już od <br /><strong>127 800 zł</strong></p>
+                </div>
+                <div class="models-carousel__row">
+                  <a href="#" class="btn btn--dark">Umów jazdę próbną</a>
+                </div>
+              </div>
+            </div>
+            <div class="splide__slide">
+              <h2 class="models-carousel__title fs-l fw-400">
+                CUPRA Formentor VZ
+              </h2>
+              <img
+                src="./img/models-carousel/cupra-formentor-vz.png"
+                alt="A very descriptive description of an img."
+                class="models-carousel__img"
+              />
+              <div class="models-carousel__text-content">
+                <p class="models-carousel__model-stats">
+                  Maksymalna prędkość: 250 KM/H Moc silnika: 310 KM
+                </p>
+                <div class="models-carousel__row">
+                  <p>
+                    Dostępny w leasingu z <br />
+                    0% opłaty własnej
+                  </p>
+                  <p>Rata netto/mies. od* <br /><strong>1553 zł</strong></p>
+                  <p>Cena brutto już od <br /><strong>152 400 zł</strong></p>
+                </div>
+                <div class="models-carousel__row">
+                  <a href="#" class="btn btn--dark">Umów jazdę próbną</a>
+                </div>
+              </div>
+            </div>
+            <div class="splide__slide">
+              <h2 class="models-carousel__title fs-l fw-400">CUPRA Ateca</h2>
+              <img
+                src="./img/models-carousel/cupra-ateca.png"
+                alt="A very descriptive description of an img."
+                class="models-carousel__img"
+              />
+              <div class="models-carousel__text-content">
+                <p class="models-carousel__model-stats">
+                  Maksymalna prędkość: 247 KM/H Moc silnika: 300 KM
+                </p>
+                <div class="models-carousel__row">
+                  <p>
+                    Dostępny w leasingu z <br />
+                    0% opłaty własnej
+                  </p>
+                  <p>Rata netto/mies. od* <br /><strong>2334 zł</strong></p>
+                  <p>
+                    Cena brutto już od <br />
+                    <strong>220 700 zł</strong>
+                  </p>
+                </div>
+                <div class="models-carousel__row">
+                  <a href="#" class="btn btn--dark">Umów jazdę próbną</a>
+                </div>
+              </div>
+            </div>
+            <div class="splide__slide">
+              <h2 class="models-carousel__title fs-l fw-400">
+                Nowa CUPRA Born
+              </h2>
+              <img
+                src="./img/models-carousel/cupra-born.png"
+                alt="A very descriptive description of an img."
+                class="models-carousel__img"
+              />
+              <div class="models-carousel__text-content">
+                <p class="models-carousel__model-stats">
+                  Akumulator 58 kWh moc do 204 KM²
+                </p>
+                <div class="models-carousel__row">
+                  <p>
+                    Dostępny w leasingu z <br />
+                    0% opłaty własnej
+                  </p>
+                  <p>Rata netto/mies. od* <br /><strong>1943 zł</strong></p>
+                  <p>Cena brutto już od <br /><strong>179 600 zł</strong></p>
+                </div>
+                <div class="models-carousel__row">
+                  <a href="#" class="btn btn--dark">Umów jazdę próbną</a>
+                </div>
+              </div>
+            </div>
+            <div class="splide__slide">
+              <h2 class="models-carousel__title fs-l fw-400">Leon</h2>
+              <img
+                src="./img/models-carousel/cupra-leon.png"
+                alt="A very descriptive description of an img."
+                class="models-carousel__img"
+              />
+              <div class="models-carousel__text-content">
+                <p class="models-carousel__model-stats">
+                  Maksymalna prędkość: 245 KM/H Moc silnika: 300 KM
+                </p>
+                <div class="models-carousel__row">
+                  <p>
+                    Dostępny w leasingu z <br />
+                    0% opłaty własnej
+                  </p>
+                  <p>Rata netto/mies. od* <br /><strong>1553 zł</strong></p>
+                  <p>
+                    Cena brutto już od <br />
+                    <strong>152 400 zł</strong>
+                  </p>
+                </div>
+                <div class="models-carousel__row">
+                  <a href="#" class="btn btn--dark">Umów jazdę próbną</a>
+                </div>
+              </div>
+            </div>
+            <div class="splide__slide">
+              <h2 class="models-carousel__title fs-l fw-400">
+                Leon Sportstourer
+              </h2>
+              <img
+                src="./img/models-carousel/cupra-sportstourer.png"
+                alt="A very descriptive description of an img."
+                class="models-carousel__img"
+              />
+              <div class="models-carousel__text-content">
+                <p class="models-carousel__model-stats">
+                  Maksymalna prędkość: 250 KM/H Moc silnika: 310 KM
+                </p>
+                <div class="models-carousel__row">
+                  <p>
+                    Dostępny w leasingu z <br />
+                    0% opłaty własnej
+                  </p>
+                  <p>Rata netto/mies. od* <br /><strong>1601 zł</strong></p>
+                  <p>
+                    Cena brutto już od <br />
+                    <strong>156 200 zł</strong>
+                  </p>
+                </div>
+                <div class="models-carousel__row">
+                  <a href="#" class="btn btn--dark">Umów jazdę próbną</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
+    <script src="./node_modules/@splidejs/splide/dist/js/splide.min.js"></script>
     <script src="./js/index.js"></script>
   </body>
 </html>

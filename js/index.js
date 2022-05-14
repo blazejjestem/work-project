@@ -17,3 +17,21 @@ window.onresize = () => {
     navButton.classList.remove("nav__toggle-button--active");
   }
 };
+
+// Carousel
+
+new Splide("#models-carousel", {
+  type: "loop",
+  perPage: 1,
+  focus: "center",
+  padding: "30%",
+  width: "100%",
+  gap: "40%",
+  pagination: false,
+  // lazyLoad: true,
+  breakpoints: {
+    900: {
+      padding: 0,
+    },
+  },
+}).mount();
