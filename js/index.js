@@ -21,6 +21,9 @@ window.onresize = () => {
 // Carousel
 
 new Splide("#models-carousel", {
+  classes: {
+    arrows: "splide__arrows arrow arrow--square",
+  },
   type: "loop",
   perPage: 1,
   focus: "center",
@@ -34,4 +37,28 @@ new Splide("#models-carousel", {
       padding: 0,
     },
   },
+}).mount();
+
+new Splide("#formentor-info__carousel", {
+  type: "loop",
+  classes: {
+    arrows: "splide__arrows arrow arrow--round",
+    page: "splide__pagination__page square-page",
+  },
+  perPage: 3,
+  gap: 40,
+  pagination: false,
+  padding: 16,
+  pagination: true,
+  breakpoints: {
+    550: {
+      perPage: 1,
+      arrows: false,
+    },
+    950: {
+      perPage: 2,
+    },
+  },
+
+  // width: "100%",
 }).mount();

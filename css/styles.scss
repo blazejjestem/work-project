@@ -102,7 +102,7 @@ body {
   &--sand {
     background-color: $color-sand;
     color: $color-black;
-    border: none;
+    border-color: $color-sand;
   }
 }
 .container {
@@ -127,7 +127,6 @@ body {
 
 .flex {
   display: flex;
-  flex-direction: column;
   &-50 {
     width: 49%;
   }
@@ -159,24 +158,12 @@ body {
     font-size: 32px;
   }
   &-m {
-    font-size: 20px;
+    font-size: 26px;
   }
   &-s {
-    font-size: 16px;
+    font-size: 20px;
   }
 }
-
-// .title {
-//   &-l {
-//     // padding: 20px 0;
-//   }
-//   &-m {
-//     padding: 15px 0;
-//   }
-//   &-s {
-//     // padding: 10px 0;
-//   }
-// }
 
 // Nav
 
@@ -333,16 +320,19 @@ header {
       margin-bottom: 40px;
     }
   }
-  .col {
-    img {
-      width: 100%;
+  .row {
+    flex-direction: column;
+    .col {
+      img {
+        width: 100%;
+      }
     }
   }
 }
 
 .models-carousel {
   background-color: $color-light-gray;
-  padding: 100px 0;
+  padding: 80px 0;
   text-align: center;
   color: rgba(0, 0, 0, 0.5);
   strong {
@@ -362,6 +352,64 @@ header {
     align-items: center;
     gap: 40px;
     padding-bottom: 40px;
+  }
+}
+
+.formentor-info {
+  background-color: $color-dark-gray;
+  padding: 80px 0;
+  color: $color-white;
+  &__hero-small {
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+  h2 {
+    position: absolute;
+    bottom: 25px;
+    left: 30px;
+  }
+  .row {
+    padding: 30px 1em;
+    flex-direction: column;
+
+    .col {
+      padding: 1em 0;
+      p {
+        padding-bottom: 10px;
+      }
+
+      &:last-of-type {
+        gap: 1em;
+      }
+    }
+  }
+  .btn--transparent {
+    border-color: white;
+  }
+  &__carousel {
+    .splide__arrow {
+      top: 8%;
+      &--prev {
+        left: 40px;
+      }
+      &--next {
+        right: 40px;
+      }
+    }
+    .splide__slide {
+      opacity: 1;
+    }
+    img {
+      width: 100%;
+    }
+  }
+  &__text-content {
+    padding: 20px 0;
+    line-height: 24px;
+    margin-bottom: 30px;
+  }
+  &__title {
+    padding: 10px 0;
   }
 }
 // Media queries
@@ -413,6 +461,41 @@ header {
       &:last-of-type {
         margin-top: 300px;
         width: 40%;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .models-carousel {
+    .splide {
+      &__arrow {
+        top: 30%;
+
+        &--prev {
+          left: 25%;
+        }
+        &--next {
+          right: 25%;
+        }
+      }
+    }
+  }
+
+  .formentor-info {
+    .row {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    .col {
+      &:first-of-type {
+        max-width: 600px;
+      }
+      &:last-of-type {
+        padding-top: 15px;
+        align-items: flex-start;
+        justify-content: right;
+        gap: 2em;
       }
     }
   }
@@ -490,9 +573,33 @@ header {
   }
 }
 
-.splide__slide {
-  opacity: 0.5;
+.arrow {
+  background-color: $color-white;
+  height: 50px;
+  width: 50px;
+  img {
+    height: 15px;
+    width: 15px;
+  }
+  &--square {
+    border-radius: 10px;
+  }
+  &--round {
+    border-radius: 100%;
+  }
 }
+.square-page {
+  height: 2px;
+  width: 15px;
+  border-radius: 0;
+  margin: 0 5px;
+}
+.splide {
+  &__slide {
+    opacity: 0.5;
+  }
+}
+
 .is-active {
   opacity: 1;
 }
