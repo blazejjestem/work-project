@@ -62,3 +62,13 @@ new Splide("#formentor-info__carousel", {
 
   // width: "100%",
 }).mount();
+
+document.querySelectorAll(".design-carousel").forEach((carousel) => {
+  new Splide(carousel, {
+    classes: {
+      arrows: "splide__arrows arrow arrow--square",
+    },
+    type: "loop",
+    pagination: false,
+  }).mount();
+});

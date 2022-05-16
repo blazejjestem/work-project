@@ -412,6 +412,34 @@ header {
     padding: 10px 0;
   }
 }
+
+.design {
+  padding: 100px 0;
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+  img {
+    width: 100%;
+  }
+  .row {
+    display: flex;
+    flex-direction: column;
+  }
+  &__text-content {
+    padding: 64px 32px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    max-width: 600px;
+
+    margin: 0 auto;
+    p:last-of-type {
+      margin: 10px 0 50px 0;
+    }
+  }
+}
 // Media queries
 @media screen and (min-width: 750px) {
   // Font size
@@ -496,6 +524,37 @@ header {
         align-items: flex-start;
         justify-content: right;
         gap: 2em;
+      }
+    }
+  }
+}
+@media screen and (min-width: 950px) {
+  .design {
+    .container {
+      gap: 8em;
+    }
+    &__text-content {
+      position: absolute;
+      left: 55%;
+      background-color: $color-white;
+      text-align: left;
+      align-items: baseline;
+      width: 50%;
+      max-width: 600px;
+      padding-left: 64px;
+    }
+    &__text-content--reverse {
+      left: auto;
+      right: 55%;
+    }
+    .row {
+      flex-direction: row;
+
+      .col:first-of-type {
+        width: 60%;
+      }
+      &:nth-child(2) {
+        flex-direction: row-reverse;
       }
     }
   }
