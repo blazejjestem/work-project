@@ -1,8 +1,16 @@
 // Navbar toggle
 const navButton = document.querySelector(".nav__toggle-button");
-
+const links = document.querySelectorAll(".link");
 const navMenu = document.querySelector(".nav__menu");
 
+// Close navbar on clicking a link.
+links.forEach((link) => {
+  link.addEventListener("click", () => {
+    navMenu.classList.remove("nav__menu--active");
+    navButton.classList.remove("nav__toggle-button--active");
+  });
+});
+// Open/close navbar with toggle button
 navButton.addEventListener("click", () => {
   navButton.classList.toggle("nav__toggle-button--active");
   navMenu.classList.toggle("nav__menu--active");

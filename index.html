@@ -19,27 +19,27 @@
     <header>
       <div class="container">
         <nav class="nav">
-          <a href="#"
-            ><img loading="lazy" src="./img/cupra-logo.png" alt="Cupra logo" class="nav__logo"
+          <a href="#" class="link" 
+            ><img loading="lazy" src="./img/cupra-logo.png" alt="Cupra logo" class="nav__logo" title="Cupra logo."
           /></a>
           <div class="nav__menu">
-            <ul class="nav__links">
-              <li><a href="#models-carousel">Samochody</a></li>
-              <li><a href="#">Jazda próbna</a></li>
-              <li><a href="#offer">Oferta</a></li>
-              <li><a href="#">Salony Cupra</a></li>
+            <ul class="nav__links" title="Navigation links">
+              <li><a href="#models-carousel"  class="link">Samochody</a></li>
+              <li><a href="#" class="link">Jazda próbna</a></li>
+              <li><a href="#offer" class="link">Oferta</a></li>
+              <li><a href="#" class="link">Salony Cupra</a></li>
             </ul>
             <ul class="nav__actions">
               <li>
-                <a href="#"><strong>+48 58 506 65 65</strong></a>
+                <a href="#" title="Telephone number" class="link"><strong>+48 58 506 65 65</strong></a>
               </li>
               <li>
-                <a href="#" class="btn btn--transparent">Zapytaj o ofertę</a>
+                <a href="#" class="btn btn--transparent link">Zapytaj o ofertę</a>
               </li>
-              <li><a href="#" class="btn btn--dark">Umów jazdę próbną</a></li>
+              <li><a href="#" class="btn btn--dark link">Umów jazdę próbną</a></li>
             </ul>
           </div>
-          <div class="nav__toggle-button">
+          <div class="nav__toggle-button link" title="Open/Close navigation">
             <span class="nav__line nav__line--one"></span>
             <span class="nav__line nav__line--two"></span>
             <span class="nav__line nav__line--three"></span>
@@ -837,7 +837,44 @@
             <a href="#" class="btn btn--sand">Napisz do nas</a>
           </div>
       </section>
-      </div>
+      <section class="contact">
+        <div class="container">
+          <div class="contact__header">
+            <p class="fw-300">Lokalizacja i kontakt</p>
+            <p class="fw-300 fs-l">Odwiedź nas i przekonaj<br> się sam, czym jest CUPRA</p>
+          </div>
+          <div class="maps">
+            <div class="row">
+              <div class="col">
+                <iframe width="600" height="450" style="border:0" loading="lazy" allowfullscreen src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJj4MA7Gh1_UYRm8jfb0qYQEM&key=AIzaSyA4lBrNdGP2Vxg7XusEi4VWx_VcrW6dhW4"></iframe>
+                <div class="maps__info">
+                  <p class="fw-500">CUPRA Plichta</p>
+                  <p class="fw-300">Autoryzowany Serwis i Salon</p>
+                  <p class="fw-300">Lubowidzka 40</p>
+                  <p class="fw-300">80-174 Gdańsk</p>
+                  <p class="fw-300"><a href="#">+48 58 506 67 60</a></p>
+                  <p class="fw-300"><a href="#">cupra@plichta.com.pl</a></p>
+                  <a href="" class="btn btn--transparent">Wyznacz trasę.</a>
+                </div> 
+              </div>
+              <div class="col">
+                  <iframe width="600" height="450" style="border:0" loading="lazy" allowfullscreen src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJFfy1M6dz_UYR0rLvyxwbxnU&key=AIzaSyA4lBrNdGP2Vxg7XusEi4VWx_VcrW6dhW4"></iframe> 
+                  <div class="maps__info">
+                    <p class="fw-500">CUPRA Studio Gdańsk</p>
+                    <p class="fw-300">Autoryzowany Serwis i Salon</p>
+                    <p class="fw-300">ul. Marynarki Polskiej 92
+                    </p>
+                    <p class="fw-300">80-557 Gdańsk</p>
+                    <p class="fw-300"><a href="#">+48 58 506 65 65
+                    </a></p>
+                    <p class="fw-300"><a href="#">cuprastudio@plichta.com.pl</a></p>
+                    <a href="" class="btn btn--transparent">Wyznacz trasę.</a>
+                  </div> 
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
     <script src="./node_modules/@splidejs/splide/dist/js/splide.min.js"></script>
     <script src="./js/index.js"></script>
