@@ -94,6 +94,7 @@ body {
 
   &--round {
     border-radius: 24px;
+    padding: 0 32px;
   }
   &--dark {
     color: white;
@@ -111,7 +112,7 @@ body {
   }
 }
 .container {
-  max-width: 1440px;
+  max-width: 1320px;
   margin: 0 auto;
   padding: 0 1em;
 }
@@ -292,11 +293,11 @@ header {
 // Hero section
 
 .hero {
-  height: 100vh;
+  height: calc(100vh - 80px);
   video {
     object-fit: cover;
     object-position: center;
-    height: 100vh;
+    height: 100%;
     width: 100%;
   }
 
@@ -318,7 +319,7 @@ header {
   padding: 80px 0;
   background-color: $color-dark-gray;
   &__text-content {
-    max-width: 500px;
+    max-width: 550px;
   }
   &__title {
     padding-bottom: 20px;
@@ -438,7 +439,7 @@ header {
     flex-direction: column;
   }
   &__text-content {
-    padding: 64px 32px;
+    padding: 64px 0;
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -455,7 +456,7 @@ header {
     color: $color-white;
     margin: 0 auto;
     width: 100%;
-    padding: 50px 16px;
+    padding: 100px 16px;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -485,6 +486,7 @@ header {
   &__model {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     width: 100%;
     img {
       width: 100%;
@@ -502,6 +504,11 @@ header {
       padding-bottom: 12px;
     }
   }
+  &__disclaimer {
+    margin-bottom: 100px;
+    font-size: 14px;
+    width: 80%;
+  }
 
   hr {
     margin: 30px 0;
@@ -510,11 +517,12 @@ header {
   .cta {
     background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
       url(../img/cupra-salon-cta.jpg);
-
+    background-position: center;
+    background-repeat: no-repeat;
     color: $color-white;
     margin: 0 auto;
     width: 100%;
-    padding: 50px 16px;
+    padding: 100px 16px;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -571,6 +579,7 @@ header {
     &__models {
       flex-direction: row;
       justify-content: center;
+      align-items: baseline;
       flex-wrap: wrap;
       gap: 16px;
     }
@@ -598,15 +607,15 @@ header {
 
   .hero {
     &__text {
-      left: 80px;
       h1 {
-        font-size: 48px;
+        font-size: 60px;
       }
     }
   }
   .try-out {
     &__cta {
       margin-top: 100px;
+      width: 100%;
       p:last-of-type {
         margin-bottom: 50px;
       }
@@ -617,15 +626,15 @@ header {
       gap: 2em;
     }
     img {
-      padding: 20px 0 0 0;
+      padding: 40px 0 20px 0;
     }
     .col {
       flex-shrink: 1;
       &:first-of-type {
-        width: 60%;
+        width: 65%;
       }
       &:last-of-type {
-        margin-top: 300px;
+        margin-top: 250px;
         width: 40%;
       }
     }
@@ -659,6 +668,88 @@ header {
     }
   }
 
+  .design {
+    .container {
+      gap: 8em;
+    }
+    &__text-content {
+      position: relative;
+      right: 15%;
+      background-color: $color-white;
+      text-align: left;
+      align-items: baseline;
+      padding: 0 0 80px 80px;
+    }
+    &__text-content--reverse {
+      right: auto;
+      left: 15%;
+      padding-right: 70px;
+      padding-left: 0;
+    }
+    .row {
+      flex-direction: row;
+
+      .col:first-of-type {
+        width: 60%;
+      }
+      .col:last-of-type {
+        width: 40%;
+      }
+      &:nth-child(1),
+      &:nth-child(3) {
+        .splide__arrow--next {
+          right: 15%;
+        }
+      }
+      &:nth-child(2) {
+        flex-direction: row-reverse;
+        .splide__arrow--prev {
+          left: 15%;
+        }
+      }
+    }
+    .splide__arrow {
+      opacity: 0.6;
+      border-radius: 0;
+    }
+    .cta {
+      padding: 125px 16px;
+    }
+  }
+}
+@media screen and (min-width: 950px) {
+  .current-offer {
+    text-align: left;
+    &__models {
+      flex-direction: row;
+      gap: 16px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    &__model {
+      width: 32%;
+    }
+    &__details {
+      width: 90%;
+      min-height: 350px;
+      max-width: 500px;
+      position: relative;
+      justify-content: space-between;
+      top: -30px;
+      left: -30px;
+      line-height: 28px;
+      h3 {
+        line-height: 36px;
+      }
+    }
+
+    .cta {
+      width: 100%;
+      padding: 125px 16px;
+    }
+  }
+}
+@media screen and (min-width: 1050px) {
   .formentor-info {
     .row {
       flex-direction: row;
@@ -674,80 +765,6 @@ header {
         justify-content: right;
         gap: 2em;
       }
-    }
-  }
-}
-@media screen and (min-width: 950px) {
-  .design {
-    .container {
-      gap: 8em;
-    }
-    &__text-content {
-      position: absolute;
-      left: 55%;
-      background-color: $color-white;
-      text-align: left;
-      align-items: baseline;
-      width: 50%;
-      max-width: 600px;
-      padding-left: 64px;
-    }
-    &__text-content--reverse {
-      left: auto;
-      right: 55%;
-    }
-    .row {
-      flex-direction: row;
-
-      .col:first-of-type {
-        width: 60%;
-      }
-      &:nth-child(1),
-      &:nth-child(3) {
-        .splide__arrow--next {
-          right: 10%;
-        }
-      }
-      &:nth-child(2) {
-        flex-direction: row-reverse;
-        .splide__arrow--prev {
-          left: 10%;
-        }
-      }
-    }
-    .splide__arrow {
-      opacity: 0.6;
-      border-radius: 0;
-    }
-    .cta {
-      width: 80%;
-      padding: 100px 16px;
-    }
-  }
-
-  .current-offer {
-    text-align: left;
-    &__models {
-      flex-direction: row;
-      gap: 16px;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-    &__model {
-      width: 32%;
-      min-height: 600px;
-    }
-    &__details {
-      justify-content: space-between;
-      width: 90%;
-      height: 350px;
-      max-width: 500px;
-      position: absolute;
-      top: 85%;
-    }
-    .cta {
-      width: 80%;
-      padding: 100px 16px;
     }
   }
 }
@@ -819,7 +836,7 @@ header {
   }
   .hero {
     &__text {
-      left: 80px;
+      // left: 80px;
       bottom: 100px;
       h1 {
         line-height: 64px;

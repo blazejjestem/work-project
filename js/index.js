@@ -4,6 +4,7 @@ const links = document.querySelectorAll(".link");
 const navMenu = document.querySelector(".nav__menu");
 
 // Close navbar on clicking a link.
+
 links.forEach((link) => {
   link.addEventListener("click", () => {
     navMenu.classList.remove("nav__menu--active");
