@@ -293,7 +293,7 @@ header {
 // Hero section
 
 .hero {
-  height: calc(100vh - 80px);
+  height: 100vh;
   video {
     object-fit: cover;
     object-position: center;
@@ -456,6 +456,7 @@ header {
     color: $color-white;
     margin: 0 auto;
     width: 100%;
+    max-width: 1150px;
     padding: 100px 16px;
     text-align: center;
     display: flex;
@@ -519,9 +520,11 @@ header {
       url(../img/cupra-salon-cta.jpg);
     background-position: center;
     background-repeat: no-repeat;
+    background-size: cover;
     color: $color-white;
     margin: 0 auto;
     width: 100%;
+    max-width: 1150px;
     padding: 100px 16px;
     text-align: center;
     display: flex;
