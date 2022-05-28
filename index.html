@@ -25,12 +25,12 @@
               src="./img/cupra-logo.png"
               alt="Cupra logo"
               class="nav__logo"
-              title="Cupra logo."
+              title="Cupra logo"
           /></a>
           <div class="nav__menu">
             <ul class="nav__links" title="Navigation links">
               <li><a href="#models-carousel" class="link">Samochody</a></li>
-              <li><a href="#" class="link">Jazda próbna</a></li>
+              <li><a href="#test-drive" class="link">Jazda próbna</a></li>
               <li><a href="#offer" class="link">Oferta</a></li>
               <li><a href="#contact" class="link">Salony Cupra</a></li>
             </ul>
@@ -799,15 +799,87 @@
           </div>
         </div>
       </section>
-      <section class="contact-form">
+      <section id="test-drive" class="contact-form">
         <div class="container">
-          <div class="row">
-            <div class="contact-form__title">
-              <p>Jazda próbna</p>
-              <h3 class="fs-l fw-300">Umów się na bezpłatną jazdę próbną</h3>
-            </div>
-            <form id="contact-form" action="#"></form>
+          <div class="contact-form__title">
+            <p>Jazda próbna</p>
+            <h3 class="fs-l fw-300">Umów się na bezpłatną jazdę próbną</h3>
           </div>
+          <form id="contact-form" action="#">
+            <div class="dropdown">
+              <input type="hidden" name="model" value="Cupra Formentor" />
+              <div class="showcase dropdown__btn">
+                <img
+                  src="./img/select/select1.png"
+                  alt="Cupra Formentor"
+                  height="179"
+                  width="306"
+                  loading="lazy"
+                  class="showcase__img"
+                />
+                <span class="showcase__text">Cupra Formentor</span>
+                <span class="showcase__arrow"
+                  ><img
+                    src="./img/down-arrow.svg"
+                    alt=""
+                    height="10"
+                    width="10"
+                /></span>
+              </div>
+              <ul class="dropdown__list">
+                <li class="dropdown__item dropdown__item--hidden" data-id="0">
+                  <img
+                    src="./img/select/select1.png"
+                    alt="Cupra Formentor"
+                    height="179"
+                    width="306"
+                    loading="lazy"
+                  />
+                  <span>Cupra Formentor</span>
+                </li>
+                <li class="dropdown__item" data-id="1">
+                  <img
+                    src="./img/select/select2.png"
+                    alt="Cupra Leon"
+                    height="179"
+                    width="306"
+                    loading="lazy"
+                  />
+                  <span>Cupra Leon</span>
+                </li>
+                <li class="dropdown__item" data-id="2">
+                  <img
+                    src="./img/select/select3.png"
+                    alt="Cupra Leon Sportstourer"
+                    height="179"
+                    width="306"
+                    loading="lazy"
+                  />
+                  <span>Cupra Leon Sportstourer</span>
+                </li>
+                <li class="dropdown__item" data-id="3">
+                  <img
+                    src="./img/select/select4.png"
+                    alt="Cupra Ateca"
+                    height="179"
+                    width="306"
+                    loading="lazy"
+                  />
+                  <span>Cupra Ateca</span>
+                </li>
+                <li class="dropdown__item" data-id="4">
+                  <img
+                    src="./img/select/select5.png"
+                    alt="Nowa Cupra Born"
+                    height="179"
+                    width="306"
+                    loading="lazy"
+                  />
+                  <span>Nowa Cupra Born</span>
+                </li>
+              </ul>
+            </div>
+          </form>
         </div>
       </section>
       <section id="offer" class="current-offer">

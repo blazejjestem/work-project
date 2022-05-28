@@ -81,3 +81,14 @@ document.querySelectorAll(".design-carousel").forEach((carousel) => {
     pagination: false,
   }).mount();
 });
+
+// Form section
+
+const formBtn = document.querySelector(".dropdown__btn");
+const formArrow = document.querySelector(".showcase__arrow");
+const formList = document.querySelector(".dropdown__list");
+
+formBtn.addEventListener("click", () => {
+  formList.classList.toggle("dropdown__list--active");
+  formArrow.classList.toggle("showcase__arrow--open");
+});
