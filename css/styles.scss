@@ -91,6 +91,8 @@ body {
   max-width: 250px;
   padding: 0.5em 1em !important;
   font-weight: 400;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
 
   &--round {
     border-radius: 24px;
@@ -99,16 +101,26 @@ body {
   &--dark {
     color: white;
     background-color: $color-dark-gray;
+
+    &:hover {
+      opacity: 0.8;
+    }
   }
 
   &--transparent {
     background-color: transparent;
+    &:hover {
+      outline: 1px solid black;
+    }
   }
 
   &--sand {
     background-color: $color-sand;
     color: $color-black;
     border-color: $color-sand;
+    &:hover {
+      background-color: #f3f3f3;
+    }
   }
 }
 .container {
@@ -157,6 +169,9 @@ body {
 }
 // Font size
 .fs {
+  &-13 {
+    font-size: 13px;
+  }
   &-xl {
     font-size: 32px;
   }
@@ -188,7 +203,6 @@ header {
   align-items: center;
   white-space: nowrap;
   ul {
-    // width: 100%;
     li {
       width: 100%;
       text-align: center;
@@ -473,9 +487,18 @@ header {
 .contact-form {
   background-color: #f5f5f5;
   padding: 100px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__title {
+    text-align: center;
+    padding-bottom: 50px;
+  }
   .dropdown {
     position: relative;
     max-width: 550px;
+    max-height: 745px;
     margin: 0 auto;
 
     &::after {
@@ -507,7 +530,7 @@ header {
       padding: 10px 30px 0 0;
       position: relative;
       z-index: 5;
-
+      cursor: pointer;
       &--hidden {
         display: none;
       }
@@ -535,8 +558,8 @@ header {
       position: absolute;
       right: 20px;
       top: 50%;
+      transition: transform 0.2s ease-in-out;
       transform: translateY(-50%);
-
       &--open {
         transform: rotate(180deg);
       }
@@ -549,6 +572,113 @@ header {
     //   width: calc(100% - 30px);
     //   border-bottom: 1px solid #c5c5c5;
     // }
+  }
+
+  .contact-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+    .row {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      position: relative;
+    }
+    .field-required {
+      font-size: 13px;
+    }
+    input {
+      border: none;
+      padding: 15px 0;
+      border-bottom: 1px solid #c5c5c5;
+      border-radius: 0;
+      background: transparent;
+      width: 100%;
+      max-width: 550px;
+      font-weight: 400;
+      font-size: inherit;
+      font-family: inherit;
+
+      &:focus {
+        outline: none;
+      }
+    }
+    p {
+      max-width: 550px;
+      width: 100%;
+      padding-top: 20px;
+      margin: 0 auto;
+      align-self: flex-start;
+    }
+  }
+
+  .form-info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 670px;
+    padding: 10px 0;
+  }
+  .form-consents {
+    .row {
+      display: flex;
+      align-items: flex-start;
+      gap: 5px;
+      position: relative;
+    }
+    label {
+      width: 100%;
+      cursor: pointer;
+      align-self: center;
+    }
+    input[type="checkbox"] {
+      appearance: none;
+      background-color: transparent;
+      height: 20px;
+      width: 100%;
+      max-width: 20px;
+      border: 1px solid #c5c5c5;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+
+      &::before {
+        content: "";
+        width: 10px;
+        height: 10px;
+        transform: scale(0);
+        transition: 0.01s transform ease-in-out;
+        background-color: #8c8b8b;
+      }
+
+      &:checked::before {
+        transform: scale(1);
+      }
+    }
+  }
+  .form-btn {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+
+    .btn {
+      width: 200px;
+      height: 50px;
+      cursor: pointer;
+    }
+  }
+  .invalid-input {
+    color: red;
+    position: absolute;
+    right: 60px;
+    bottom: 10px;
+
+    &--hidden {
+      display: none;
+    }
   }
 }
 // Current offer
@@ -655,6 +785,52 @@ header {
     }
   }
 }
+// Offer form
+.offer-form {
+  position: fixed;
+  top: 0;
+  left: -100vw;
+  height: 100vh;
+  width: 100%;
+  overflow: auto;
+  transition: transform 0.5s ease-in-out;
+
+  &--active {
+    transform: translateX(100vw);
+  }
+
+  .close-form {
+    padding: 10px 0;
+    margin-bottom: 50px;
+    cursor: pointer;
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    vertical-align: bottom;
+  }
+}
+// Footer
+footer {
+  border-top: 1px solid #c5c5c5;
+}
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  justify-content: center;
+  padding: 2em;
+  &__links {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+  }
+  &__icons {
+    display: flex;
+    gap: 15px;
+  }
+}
 // Media queries
 @media screen and (min-width: 450px) {
   .contact-form {
@@ -754,6 +930,15 @@ header {
       .col {
         width: 49%;
       }
+    }
+  }
+  .footer {
+    flex-direction: row;
+    justify-content: space-between;
+
+    &__links {
+      flex-direction: row;
+      gap: 15px;
     }
   }
 }
@@ -874,7 +1059,7 @@ header {
     }
   }
 }
-@media screen and (min-width: 1250px) {
+@media screen and (min-width: 1150px) {
   header {
     padding: 1em 0;
   }
@@ -901,6 +1086,9 @@ header {
       font-size: 1rem;
       li {
         border: none;
+        &:hover {
+          border-bottom: 1px solid black;
+        }
       }
     }
     &__actions {
@@ -910,6 +1098,15 @@ header {
       display: none;
     }
   }
+}
+@media screen and (min-width: 1200px) {
+  .nav {
+    &__menu {
+      padding: 0 4em;
+    }
+  }
+}
+@media screen and (min-width: 1250px) {
   .models-carousel {
     &__row {
       flex-direction: row;
@@ -918,7 +1115,6 @@ header {
     }
   }
 }
-
 @media screen and (min-width: 1350px) {
   // Font size
   .fs {
@@ -933,11 +1129,6 @@ header {
     }
     &-s {
       font-size: 20px;
-    }
-  }
-  .nav {
-    &__menu {
-      padding: 0 4em;
     }
   }
   .hero {
@@ -981,4 +1172,15 @@ header {
 
 .is-active {
   opacity: 1;
+}
+
+.fade-in {
+  position: relative;
+  transform: translateY(100px);
+  opacity: 0;
+  transition: all 0.7s ease-in-out;
+  &--active {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
