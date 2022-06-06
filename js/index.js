@@ -85,9 +85,9 @@ document.querySelectorAll(".design-carousel").forEach((carousel) => {
 
 // Form section
 
-const dropdownBtn = document.querySelector(".dropdown__btn");
-const formArrow = document.querySelector(".showcase__arrow");
-const formList = document.querySelector(".dropdown__list");
+const dropdownBtn = document.querySelector(".contact-dropdown__btn");
+const formArrow = document.querySelector(".contact-showcase__arrow");
+const formList = document.querySelector(".contact-dropdown__list");
 // Opening the dropdown menu
 dropdownBtn.addEventListener("click", (e) => {
   formList.classList.toggle("dropdown__list--active");
@@ -96,9 +96,9 @@ dropdownBtn.addEventListener("click", (e) => {
 
 // Selecting item from menu
 
-const items = document.querySelectorAll(".dropdown__item");
-const showcaseImg = document.querySelector(".showcase__img");
-const showcaseText = document.querySelector(".showcase__text");
+const items = document.querySelectorAll(".contact-dropdown__item");
+const showcaseImg = document.querySelector(".contact-showcase__img");
+const showcaseText = document.querySelector(".contact-showcase__text");
 const model = document.querySelector('input[name="model"]');
 let helperId = "0";
 
@@ -125,6 +125,8 @@ items.forEach((item) => {
 const form = document.getElementById("contact-form");
 
 form.addEventListener("submit", (e) => {
+  const formSubmitBtn = form[9];
+  const formSubmittedText = form.lastElementChild.lastElementChild;
   const model = form.model.value;
   const fName = form.fName.value;
   const lName = form.lName.value;
@@ -134,7 +136,9 @@ form.addEventListener("submit", (e) => {
   const emailAgreed = form["email-checkbox"].checked;
   const phoneAgreed = form["phone-checkbox"].checked;
   const textMessageAgreed = form["text-message-checkbox"].checked;
-
+  let fNameValid,
+    emailValid,
+    phoneValid = false;
   if (fName.trim().length < 3) {
     document
       .querySelector(".invalid-name")
@@ -144,6 +148,7 @@ form.addEventListener("submit", (e) => {
     document
       .querySelector(".invalid-name")
       .classList.add("invalid-input--hidden");
+    fNameValid = true;
   }
 
   if (
@@ -159,6 +164,7 @@ form.addEventListener("submit", (e) => {
     document
       .querySelector(".invalid-email")
       .classList.add("invalid-input--hidden");
+    emailValid = true;
   }
 
   if (phone.trim().length !== 9) {
@@ -170,6 +176,17 @@ form.addEventListener("submit", (e) => {
     document
       .querySelector(".invalid-phone")
       .classList.add("invalid-input--hidden");
+    phoneValid = true;
+  }
+
+  if (fNameValid && emailValid && phoneValid) {
+    formSubmitBtn.style.display = "none";
+    formSubmittedText.style.display = "flex";
+    form.reset();
+    setTimeout(() => {
+      formSubmitBtn.style.display = "flex";
+      formSubmittedText.style.display = "none";
+    }, 3000);
   }
   e.preventDefault();
 });
@@ -245,6 +262,8 @@ offerItems.forEach((item) => {
 // offer form validation
 const offerForm = document.getElementById("offer-form");
 offerForm.addEventListener("submit", (e) => {
+  const formSubmitBtn = offerForm[9];
+  const formSubmittedText = offerForm.lastElementChild.lastElementChild;
   const model = offerForm["offer-model"].value;
   const fName = offerForm.fName.value;
   const lName = offerForm.lName.value;
@@ -254,7 +273,9 @@ offerForm.addEventListener("submit", (e) => {
   const emailAgreed = offerForm["email-checkbox"].checked;
   const phoneAgreed = offerForm["phone-checkbox"].checked;
   const textMessageAgreed = offerForm["text-message-checkbox"].checked;
-
+  let fNameValid,
+    emailValid,
+    phoneValid = false;
   if (fName.trim().length < 3) {
     document
       .querySelector(".offer-invalid-name")
@@ -263,6 +284,7 @@ offerForm.addEventListener("submit", (e) => {
     document
       .querySelector(".offer-invalid-name")
       .classList.add("invalid-input--hidden");
+    fNameValid = true;
   }
 
   if (
@@ -278,6 +300,7 @@ offerForm.addEventListener("submit", (e) => {
     document
       .querySelector(".offer-invalid-email")
       .classList.add("invalid-input--hidden");
+    emailValid = true;
   }
 
   if (phone.trim().length !== 9) {
@@ -288,7 +311,16 @@ offerForm.addEventListener("submit", (e) => {
     document
       .querySelector(".offer-invalid-phone")
       .classList.add("invalid-input--hidden");
+    phoneValid = true;
   }
-  console.log(model);
+  if (fNameValid && emailValid && phoneValid) {
+    formSubmitBtn.style.display = "none";
+    formSubmittedText.style.display = "flex";
+    offerForm.reset();
+    setTimeout(() => {
+      formSubmitBtn.style.display = "flex";
+      formSubmittedText.style.display = "none";
+    }, 2000);
+  }
   e.preventDefault();
 });

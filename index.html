@@ -101,10 +101,10 @@
               </div>
               <img
                 loading="lazy"
-                src="/img/cupra-front.png"
+                src="./img/cupra-front.png"
                 alt="A very descriptive description of an image."
-                height="500"
-                width="900"
+                height="519"
+                width="787"
               />
               <p class="opacity-50 padding-10">
                 Design inspirowany wyścigami, stworzony z niezwykłą dbałością o
@@ -129,8 +129,8 @@
                 loading="lazy"
                 src="./img/cupra-side.png"
                 alt="A very descriptive description of an image."
-                height="750"
-                width="350"
+                height="519"
+                width="787"
               />
               <div class="try-out__text-content">
                 <p class="opacity-50 padding-10">
@@ -174,8 +174,8 @@
               </h2>
               <img
                 loading="lazy"
-                width="650"
-                height="370"
+                width="667"
+                height="261"
                 src="./img/models-carousel/cupra-formentor.png"
                 alt="A very descriptive description of an img."
                 class="models-carousel__img"
@@ -207,8 +207,8 @@
               </h2>
               <img
                 loading="lazy"
-                width="650"
-                height="370"
+                width="667"
+                height="261"
                 src="./img/models-carousel/cupra-formentor-vz.png"
                 alt="A very descriptive description of an img."
                 class="models-carousel__img"
@@ -236,8 +236,8 @@
               <h2 class="models-carousel__title fs-l fw-400">CUPRA Ateca</h2>
               <img
                 loading="lazy"
-                width="650"
-                height="370"
+                width="667"
+                height="261"
                 src="./img/models-carousel/cupra-ateca.png"
                 alt="A very descriptive description of an img."
                 class="models-carousel__img"
@@ -271,8 +271,8 @@
               </h2>
               <img
                 loading="lazy"
-                width="650"
-                height="370"
+                width="667"
+                height="261"
                 src="./img/models-carousel/cupra-born.png"
                 alt="A very descriptive description of an img."
                 class="models-carousel__img"
@@ -300,8 +300,8 @@
               <h2 class="models-carousel__title fs-l fw-400">Leon</h2>
               <img
                 loading="lazy"
-                width="650"
-                height="370"
+                width="667"
+                height="261"
                 src="./img/models-carousel/cupra-leon.png"
                 alt="A very descriptive description of an img."
                 class="models-carousel__img"
@@ -334,8 +334,8 @@
               </h2>
               <img
                 loading="lazy"
-                width="650"
-                height="370"
+                width="667"
+                height="261"
                 src="./img/models-carousel/cupra-sportstourer.png"
                 alt="A very descriptive description of an img."
                 class="models-carousel__img"
@@ -372,7 +372,7 @@
             loading="lazy"
             src="./img/cupra-small-hero.png"
             alt="Cupra Formentor on a road."
-            height="500"
+            height="600"
             width="1436"
           />
           <h2 class="fs-xl">CUPRA FORMENTOR</h2>
@@ -839,17 +839,19 @@
           <form id="contact-form" action="#" class="fade-in">
             <div class="dropdown">
               <input type="hidden" name="model" value="Cupra Formentor" />
-              <div class="showcase dropdown__btn">
+              <div class="showcase dropdown__btn contact-dropdown__btn">
                 <img
                   src="./img/select/select1.png"
                   alt="Cupra Formentor"
                   height="179"
                   width="306"
                   loading="lazy"
-                  class="showcase__img"
+                  class="showcase__img contact-showcase__img"
                 />
-                <span class="showcase__text">Cupra Formentor</span>
-                <span class="showcase__arrow"
+                <span class="contact-showcase__text showcase__text"
+                  >Cupra Formentor</span
+                >
+                <span class="contact-showcase__arrow showcase__arrow"
                   ><img
                     src="./img/down-arrow.svg"
                     alt=""
@@ -857,9 +859,9 @@
                     width="10"
                 /></span>
               </div>
-              <ul class="dropdown__list">
+              <ul class="dropdown__list contact-dropdown__list">
                 <li
-                  class="dropdown__item dropdown__item--hidden"
+                  class="contact-dropdown__item dropdown__item dropdown__item--hidden"
                   data-id="0"
                   data-value="Cupra Formentor"
                 >
@@ -872,7 +874,11 @@
                   />
                   <span>Cupra Formentor</span>
                 </li>
-                <li class="dropdown__item" data-id="1" data-value="Cupra Leon">
+                <li
+                  class="contact-dropdown__item dropdown__item"
+                  data-id="1"
+                  data-value="Cupra Leon"
+                >
                   <img
                     src="./img/select/select2.png"
                     alt="Cupra Leon"
@@ -883,7 +889,7 @@
                   <span>Cupra Leon</span>
                 </li>
                 <li
-                  class="dropdown__item"
+                  class="contact-dropdown__item dropdown__item"
                   data-id="2"
                   data-value="Cupra Leon Sportstourer"
                 >
@@ -896,7 +902,11 @@
                   />
                   <span>Cupra Leon Sportstourer</span>
                 </li>
-                <li class="dropdown__item" data-id="3" data-value="Cupra Ateca">
+                <li
+                  class="contact-dropdown__item dropdown__item"
+                  data-id="3"
+                  data-value="Cupra Ateca"
+                >
                   <img
                     src="./img/select/select4.png"
                     alt="Cupra Ateca"
@@ -906,7 +916,11 @@
                   />
                   <span>Cupra Ateca</span>
                 </li>
-                <li class="dropdown__item" data-id="4" data-value="Cupra Bron">
+                <li
+                  class="contact-dropdown__item dropdown__item"
+                  data-id="4"
+                  data-value="Cupra Born"
+                >
                   <img
                     src="./img/select/select5.png"
                     alt="Nowa Cupra Born"
@@ -1049,9 +1063,10 @@
               </p>
             </div>
             <div class="form-btn">
-              <button type="submit" class="btn btn--dark fw-300">
+              <button type="submit" class="btn btn--dark fw-400 submit-btn">
                 Umów jazdę próbną
               </button>
+              <p class="submit-text">Formularz przesłany</p>
             </div>
           </form>
         </div>
@@ -1078,12 +1093,10 @@
                     Wyrazista i pełna adrenaliny. Nowa CUPRA Formentor łączy
                     odważny design crossovera coupé z mocą 310 KM.
                   </p>
-                  <div>
-                    <hr />
+                  <div class="price-download">
                     <a href="#" class="btn btn--dark btn--round"
                       >Pobierz cennik</a
                     >
-                    <hr />
                   </div>
                 </div>
               </div>
@@ -1103,12 +1116,10 @@
                     Hybrydowe połączenie silnika benzynowego i elektrycznego o
                     mocy 245 KM z maksymalnym zasiegiem 52 km.
                   </p>
-                  <div>
-                    <hr />
+                  <div class="price-download">
                     <a href="#" class="btn btn--dark btn--round"
                       >Pobierz cennik</a
                     >
-                    <hr />
                   </div>
                 </div>
               </div>
@@ -1128,12 +1139,10 @@
                     Rodzinna i sportowa - dynamiczna i stylowa hybryda plug-in w
                     wersji kombi z bagażnikiem o pojemności 470l.
                   </p>
-                  <div>
-                    <hr />
+                  <div class="price-download">
                     <a href="#" class="btn btn--dark btn--round"
                       >Pobierz cennik</a
                     >
-                    <hr />
                   </div>
                 </div>
               </div>
@@ -1154,12 +1163,10 @@
                     kolorze ciemnego aluminium i wyrazista maska z
                     przetłoczeniami, pod którą kryje się moc 300 KM.
                   </p>
-                  <div>
-                    <hr />
+                  <div class="price-download">
                     <a href="#" class="btn btn--dark btn--round"
                       >Pobierz cennik</a
                     >
-                    <hr />
                   </div>
                 </div>
               </div>
@@ -1180,12 +1187,10 @@
                     Born z zasięgiem nawet do 427 km i przyspieszeniem 7,3 s
                     sprawi, że poczujesz jazdę na nowo.
                   </p>
-                  <div>
-                    <hr />
+                  <div class="price-download">
                     <a href="#" class="btn btn--dark btn--round"
                       >Pobierz cennik</a
                     >
-                    <hr />
                   </div>
                 </div>
               </div>
@@ -1454,9 +1459,9 @@
                 <input
                   type="checkbox"
                   name="personal-data"
-                  id="personal-data"
+                  id="offer-personal-data"
                 />
-                <label class="fw-300 fs-13" for="personal-data"
+                <label class="fw-300 fs-13" for="offer-personal-data"
                   >Zgadzam się na przetwarzanie moich danych osobowych przez
                   Plichta spółka z ograniczoną odpowiedzialnością Spółka
                   Komandytowa w celu przedstawienia mi informacji marketingowych
@@ -1469,28 +1474,32 @@
                 <input
                   type="checkbox"
                   name="email-checkbox"
-                  id="email-checkbox"
+                  id="offer-email-checkbox"
                 />
 
-                <label class="fs-13 fw-300" for="email-checkbox">E-mail</label>
+                <label class="fs-13 fw-300" for="offer-email-checkbox"
+                  >E-mail</label
+                >
               </div>
               <div class="row">
                 <input
                   type="checkbox"
                   name="phone-checkbox"
-                  id="phone-checkbox"
+                  id="offer-phone-checkbox"
                 />
 
-                <label class="fs-13 fw-300" for="phone-checkbox">Telefon</label>
+                <label class="fs-13 fw-300" for="offer-phone-checkbox"
+                  >Telefon</label
+                >
               </div>
               <div class="row">
                 <input
                   type="checkbox"
                   name="text-message-checkbox"
-                  id="text-message-checkbox"
+                  id="offer-text-message-checkbox"
                 />
 
-                <label class="fs-13 fw-300" for="text-message-checkbox"
+                <label class="fs-13 fw-300" for="offer-text-message-checkbox"
                   >Wiadomość SMS/MMS</label
                 >
               </div>
@@ -1518,9 +1527,10 @@
               </p>
             </div>
             <div class="form-btn">
-              <button type="submit" class="btn btn--dark fw-300">
+              <button type="submit" class="btn btn--dark fw-400 submit-btn">
                 Umów jazdę próbną
               </button>
+              <p class="submit-text">Formularz przesłany</p>
             </div>
           </form>
         </div>
@@ -1537,10 +1547,21 @@
         </div>
         <div class="footer__icons">
           <span class="opacity-50"
-            ><img src="./img/instagram.svg" alt="" height="24" width="24"
+            ><img
+              loading="lazy"
+              src="./img/instagram.svg"
+              alt=""
+              height="24"
+              width="24"
           /></span>
           <span class="opacity-50">
-            <img src="./img/vimeo.svg" alt="" height="24" width="24" />
+            <img
+              loading="lazy"
+              src="./img/vimeo.svg"
+              alt=""
+              height="24"
+              width="24"
+            />
           </span>
         </div>
       </div>
